@@ -3,15 +3,14 @@ from greeks import Greeks
 
 
 def main():
-      # --- Parameters ---
-      S = 100       # Spot price
-    K = 100       # Strike price (at-the-money)
-    T = 1.0       # Time to maturity: 1 year
-    r = 0.05      # Risk-free rate: 5%
-    sigma = 0.20  # Volatility: 20%
+    S = 100
+    K = 100
+    T = 1.0
+    r = 0.05
+    sigma = 0.20
 
     print("=" * 50)
-    print("       VANILLA OPTION PRICER - BLACK SCHOLES")
+    print("   VANILLA OPTION PRICER - BLACK SCHOLES")
     print("=" * 50)
     print(f"  Spot (S)      : {S}")
     print(f"  Strike (K)    : {K}")
@@ -20,7 +19,6 @@ def main():
     print(f"  Volatility    : {sigma * 100:.1f}%")
     print("=" * 50)
 
-    # --- Pricing ---
     bs = BlackScholes(S=S, K=K, T=T, r=r, sigma=sigma)
 
     print("\n  PRICES")
@@ -30,7 +28,6 @@ def main():
     print(f"  d2            : {bs.d2():.4f}")
     print(f"  Put-Call Parity OK: {bs.put_call_parity_check()}")
 
-    # --- Greeks ---
     g = Greeks(S=S, K=K, T=T, r=r, sigma=sigma)
 
     print("\n  GREEKS - CALL")
@@ -51,4 +48,4 @@ def main():
 
 
 if __name__ == "__main__":
-      main()
+    main()
