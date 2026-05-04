@@ -55,8 +55,3 @@ python plot_mc.py
 | Volatilité | σ | Volatilité annuelle du sous-jacent |
 
 ---
-
-## Exemple d'utilisation
-
-```python
-from black_scholes import BlackScholes
