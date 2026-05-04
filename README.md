@@ -20,50 +20,43 @@ Pricer d'options vanilles européennes développé from scratch — projet péda
 - **Visualisation** : 4 graphiques matplotlib (trajectoires simulées, distribution terminale, convergence MC, comparaison BS/MC)
 - **Parité Put-Call** : vérification numérique intégrée (`np.isclose`, tolérance 1e-6)
 
-        - ---
+---
 
-        ## Installation
+## Installation
 
-        ```bash
-        git clone https://github.com/mariuscarre/Vanilla---option-pricer.git
-        cd Vanilla---option-pricer
-        pip install -r requirements.txt
-        ```
+```bash
+git clone https://github.com/mariuscarre/Vanilla---option-pricer.git
+cd Vanilla---option-pricer
+pip install -r requirements.txt
+```
 
-        ## Lancement
+## Lancement
 
-        ```bash
-        python main.py
-        ```
+```bash
+python main.py
+```
 
-        Pour générer les visualisations Monte Carlo :
+Pour générer les visualisations Monte Carlo :
 
-        ```bash
-        python plot_mc.py
-        ```
+```bash
+python plot_mc.py
+```
 
-        ---
+---
 
-        ## Paramètres
+## Paramètres
 
-        | Paramètre | Symbole | Description |
-        |---|---|---|
-        | Spot price | S | Prix actuel du sous-jacent |
-        | Strike price | K | Prix d'exercice de l'option |
-        | Time to maturity | T | Durée jusqu'à l'échéance (en années) |
-        | Risk-free rate | r | Taux sans risque annuel |
-        | Volatilité | σ | Volatilité annuelle du sous-jacent |
+| Paramètre | Symbole | Description |
+|---|---|---|
+| Spot price | S | Prix actuel du sous-jacent |
+| Strike price | K | Prix d'exercice de l'option |
+| Time to maturity | T | Durée jusqu'à l'échéance (en années) |
+| Risk-free rate | r | Taux sans risque annuel |
+| Volatilité | σ | Volatilité annuelle du sous-jacent |
 
-        ---
+---
 
-        ## Exemple d'utilisation
+## Exemple d'utilisation
 
-        ```python
-        from black_scholes import BlackScholes
-        from greeks import Greeks
-
-        bs = BlackScholes(S=100, K=100, T=1, r=0.05, sigma=0.2)
-        print(f"Call : {bs.call_price():.4f}")  # 10.4506
-        print(f"Put  : {bs.put_price():.4f}")   # 5.5735
-
-        g = Greeks(S=100, K=100, T=1, r=0.05, sigma=0.2)
+```python
+from black_scholes import BlackScholes
