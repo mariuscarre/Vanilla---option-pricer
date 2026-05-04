@@ -16,9 +16,9 @@ Pricer d'options vanilles européennes développé from scratch — projet péda
 
 - **Formules analytiques** : prix Call & Put via Black-Scholes, d1 et d2
 - **Grecques complètes** : Delta, Gamma, Vega (par 1% de vol), Theta (par jour), Rho (par 1% de taux)
-- **Monte Carlo** : simulation du mouvement brownien géométrique sur 100 000 trajectoires avec graine fixe pour la reproductibilité
+- **Monte Carlo** : simulation du mouvement brownien géométrique sur 100 000 trajectoires
 - **Visualisation** : 4 graphiques matplotlib (trajectoires simulées, distribution terminale, convergence MC, comparaison BS/MC)
-- **Parité Put-Call** : vérification numérique intégrée (`np.isclose`, tolérance 1e-6)
+- **Parité Put-Call** : vérification numérique intégrée
 
 ---
 
